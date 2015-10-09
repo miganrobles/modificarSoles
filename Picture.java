@@ -17,6 +17,9 @@ public class Picture
     private Circle sun;
     private Circle suelo;
     private Person persona;
+    private Person chino;
+    private Triangle gorro;
+    private Circle bola;
 
     /**
      * Constructor for objects of class Picture
@@ -121,6 +124,58 @@ public class Picture
         persona.makeVisible();
         persona.slowMoveHorizontal(150);
         
+    }
+    
+    /**
+     * Metodo que hace apareder un chino subido sobre una bola
+     */
+    public void chinoEnBola()
+    {
+        
+        bola = new Circle();
+        bola.changeColor("blue");
+        bola.moveHorizontal(180);
+        bola.moveVertical(140);
+        bola.changeSize(40);
+        bola.makeVisible();
+        
+        chino = new Person();
+        chino.changeColor("yellow");
+        chino.moveHorizontal(150);
+        chino.moveVertical(5);
+        chino.makeVisible();
+        
+        gorro = new Triangle();  
+        gorro.changeSize(10,40);
+        gorro.moveHorizontal(220);
+        gorro.moveVertical(35);
+        gorro.changeColor("green");
+        gorro.makeVisible();
+        
+    }
+    
+    /**
+     * Metodo que hace animacion con chino subido sobre una bola
+     */
+    public void animaChino()
+    {
+        
+        if (gorro != null)   // only if it's painted already...
+        {
+            gorro.slowMoveVertical(-20);
+            chino.slowMoveVertical(-19);
+            gorro.slowMoveVertical(1);
+            chino.slowMoveVertical(19);
+            gorro.slowMoveVertical(19);
+            gorro.slowMoveVertical(-20);
+            chino.slowMoveVertical(-19);
+            gorro.slowMoveVertical(1);
+            bola.slowMoveHorizontal(100);
+            chino.slowMoveVertical(150);
+            gorro.slowMoveVertical(150);
+        }
+       
+
     }
     
    }
