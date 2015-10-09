@@ -63,7 +63,6 @@ public class Picture
         suelo.moveVertical(140);
         suelo.makeVisible();
         
-        sun.slowMoveVertical(120);
         
 
     }
@@ -94,5 +93,13 @@ public class Picture
             roof.changeColor("green");
             sun.changeColor("yellow");
         }
+    }
+    
+    /**
+     * Metodo para mover el sol
+     */
+    public void movSun()
+    {
+        sun.slowMoveVertical(110);
     }
 }
