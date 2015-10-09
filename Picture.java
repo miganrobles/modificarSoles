@@ -98,8 +98,14 @@ public class Picture
     /**
      * Metodo para mover el sol
      */
-    public void movSun()
+    public void moveSun()
     {
         sun.slowMoveVertical(110);
+        suelo.changeColor("black");
+        sun.changeColor("black");
+        wall.changeColor("balck");
+        roof.changeColor("balck");
+        window.changeColor("white");
+        
     }
 }
