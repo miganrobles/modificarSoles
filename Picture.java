@@ -16,6 +16,7 @@ public class Picture
     private Triangle roof;
     private Circle sun;
     private Circle suelo;
+    private Person persona;
 
     /**
      * Constructor for objects of class Picture
@@ -108,4 +109,18 @@ public class Picture
         window.changeColor("white");
         
     }
-}
+    
+    /**
+     * Metodo para mover el sol
+     */
+    public void addPerson()
+    {
+        persona = new Person();
+        persona.makeVisible();
+        persona.moveHorizontal(-300);
+        persona.makeVisible();
+        persona.slowMoveHorizontal(150);
+        
+    }
+    
+   }
