@@ -116,7 +116,7 @@ public class Picture
     public void addPerson()
     {
         persona = new Person();
-        persona.makeVisible();
+        persona.moveVertical(20);
         persona.moveHorizontal(-300);
         persona.makeVisible();
         persona.slowMoveHorizontal(150);
